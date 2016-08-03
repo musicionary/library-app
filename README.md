@@ -1,4 +1,4 @@
-# _Weather App_
+# _Library App_ :lips:
 
 ##### This application is a practice site where I've been working on creating gulp tasks, bower tasks, and my first API call via the open source weather API.  The user can discover the humidity in any city, or based on their location.
 
