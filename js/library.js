@@ -1,5 +1,4 @@
 // var apiKey = require('./../.env').apiKey;
-
 function Library() {}
 
 Library.prototype.getBookInfo = function (searchTopic) {
@@ -16,28 +15,35 @@ Library.prototype.getBookInfo = function (searchTopic) {
       publishedDate = volume.volumeInfo.publishedDate;
       previewLink = volume.volumeInfo.previewLink;
       publisher = volume.volumeInfo.publisher;
-      categories = volume.volumeInfo.categories.join(' ');
-      authors = volume.volumeInfo.authors.join(' ');
+      if(volume.volumeInfo.categories) {
+        categories = volume.volumeInfo.categories.join(' ');
+      }
+      if(volume.volumeInfo.authors) {
+        authors = volume.volumeInfo.authors.join(' ');
+      }
 
       $('.books-info').append("<div class='book-item col-sm-4'>" +
                                 "<img class='img-responsive center-block' src='" + image + "'/>" +
                                 "<div class='book-details'>" +
-                                  "<h2>" + title + "</h2>" +
-                                  "<p class='text-justify'>" + subtitle + "</p>" +
-                                  "<p class='text-justify'>" + maturityRating + "</p>" +
-                                  "<p class='text-justify'>" + publishedDate + "</p>" +
-                                  "<p class='text-justify'>" + publisher + "</p>" +
-                                  "<p class='text-justify'>" + authors + "</p>" +
-                                  "<p class='text-justify'>" + categories + "</p>" +
-                                  "<p class='text-justify'><a href='" + previewLink + "' target='_blank'>Preview</a></p>" +
+                                  "<h2>Title: " + title + "</h2>" +
+                                  "<p class='text-justify'>Subtitle: " + subtitle + "</p>" +
+                                  "<p class='text-justify'>Rating: " + maturityRating + "</p>" +
+                                  "<p class='text-justify'>Publish Date: " + publishedDate + "</p>" +
+                                  "<p class='text-justify'>Publisher: " + publisher + "</p>" +
+                                  "<p class='text-justify'>Authors: " + authors + "</p>" +
+                                  "<p class='text-justify'>Genre: " + categories + "</p>" +
+                                  "<button class='btn btn-default preview'>Preview</button>" +
                                 "</div>" +
                               "</div>"
 
       );
+
     });
   }).fail(function (error) {
     alert('error');
   });
 };
+
+
 
 exports.libraryModule = Library;

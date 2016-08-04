@@ -18,6 +18,14 @@
   align-self: stretch;
 }
 
+#bookViewer {
+  display: none;
+}
+
+.tester {
+  display: none;
+}
+
 
 @media all and (max-width: 380px) {
   .books-info {
@@ -26,5 +34,15 @@
   .books-info {
     /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
+  }
+}
+
+.titleImages {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  img {
+    margin-right: 20px;
+    height: 200px;
   }
 }

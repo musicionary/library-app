@@ -6,25 +6,52 @@
     <link rel="stylesheet" href="build/css/vendor.css">
     <link rel="stylesheet" href="build/css/styles.css">
     <script src="build/js/vendor.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
   </head>
   <body>
     <div class="jumbotron">
-      <h1 class="text-center">Read My Lips</h1>
+      <!-- <h1 class="text-center">Read My Lips</h1> -->
+      <div class="titleImages">
+        <img class="img-responsive"src="img/read.jpg" alt="Image of a baby with glasses holding a book" />
+        <h1>M -</h1>
+        <img class="img-responsive"src="img/eye.jpeg" alt="Close up image of an eyeball" />
+        <img class="img-responsive"src="img/lips.jpg" alt="Image of sparkly lips" />
+      </div>
+      <a class="btn btn-success" role='button' href="audiobooks.html">Checkout Audiobooks</a>
     </div>
     <div class="">
       <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
           <div class="form-group">
-            <label for="authorSearch">Search Author by Name:</label>
+            <label for="authorSearch">Search Books by Keyword (author, title, genre):</label>
             <input type="text" id="authorSearch" class="form-control">
           </div>
-          <button id="getAuthor" name="button" class="btn btn-primary">Get Author</button>
+          <button id="getAuthor" name="button" class="btn btn-primary">Get Books</button>
         </div>
       </div>
 
       <div class="books-info row">
 
+      </div>
+
+      <div class="audio-book-info row">
+
+      </div>
+      <div class="audiobooks">
+        <ul>
+
+        </ul>
+      </div>
+      <div class="container" id="#bookViewer">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <div id="viewerCanvas" style="width: 900px; height: 750px"></div>
+            <div class="tester">
+              shut the front door
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
