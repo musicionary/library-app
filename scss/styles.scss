@@ -1,0 +1,30 @@
+.books-info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.book-item {
+  background: tomato;
+  padding: 30px 5px 40px 5px;
+  margin-right: 5px;
+  width: 300px;
+  margin-top: 10px;
+  color: white;
+  text-align: center;
+}
+
+.book-details {
+  align-self: stretch;
+}
+
+
+@media all and (max-width: 380px) {
+  .books-info {
+    margin: auto;
+  }
+  .books-info {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
