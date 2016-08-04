@@ -8,7 +8,10 @@ Audiobook.prototype.getAudioBooks = function (searchTerm) {
     var audioArray = returnedObject.books;
     var audioTitle;
     audioArray.forEach(function(book){
+      audioTitle = book.title;
 
+      $('.audiobooks ul').append("<li>" + audioTitle + "</li>");
+      $('.audiobooks').show();
     });
   }).fail(function(error){
     alert("error");
