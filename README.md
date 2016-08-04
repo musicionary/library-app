@@ -12,7 +12,7 @@ Installation
 
 First clone the repository.  
 ```
-$ git clone https://github.com/musicionary/read-my-lips.git
+$ git clone https://github.com/musicionary/library-app.git
 ```
 
 Install required npm packages:
@@ -25,10 +25,8 @@ Install required bower packages:
 $ bower install
 ```
 
-Sign up for an account at http://openweathermap.org/api to get an api key.  Create a .env file in the clone repository and add your api key in this line
-```
-exports.apiKey = 'yourapikeystringgoeshere';
-```
+Register your app with Google APIs.
+
 
 Run the gulp build task in the terminal in the repository folder:
 ```
@@ -45,4 +43,4 @@ Your browser should open the webpage automatically.
 License
 -------
 
-MIT License. Copyright &copy; 2016 "Chip Carnes"
+MIT License. Copyright &copy; 2016 "Chip Carnes, Caleb Stokka"
